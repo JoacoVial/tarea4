@@ -81,7 +81,8 @@ while True:
         while 1:
             data = connection.recv(4096)
             if (data == b'Puedes recibir'):
-                print("Recibiendo archivo")
+                print("\n--------------------------------------------")
+                print("Servidor recibiendo archivo")
                 recibir = True
                 break
 
@@ -94,7 +95,7 @@ while True:
                 data = None
 
         print("\n--------------------------------------------")
-        print("Encriptando archivos")
+        print("Desencriptando archivos")
         archivos_desencriptados = desencriptar_archivos(archivos_encriptado, private_key)
 
         con = sql_connection()
